@@ -1,0 +1,42 @@
+.container {
+    display: grid;
+    background-color: coral;
+    padding: 16px;
+    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:200px 400px 150px;
+    grid-template-areas:
+            "A A A B B B"
+            "C C D D D D"
+            "E E E E E E";
+
+}
+
+.grid-item {
+    background-color: mediumvioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#A {
+    grid-area: A;
+}
+
+#B {
+    grid-area: B;
+}
+
+#C {
+    grid-area: C;
+}
+
+#D {
+    grid-area: D;
+}
+
+#E {
+    grid-area: E;
+}
+
