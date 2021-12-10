@@ -1,0 +1,90 @@
+.container{
+    background-color: hsl(212, 36%, 90%);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                "A"
+                "B"
+                "B"
+                "C"
+                "D"
+                "E"
+                "."
+                "F"
+                "G"
+                "G"
+                "H"
+                "I"
+                "J"
+                "."
+                ;
+}
+
+@media screen and (min-width: 900px){
+    .container{
+        width: 900px;
+        height: 1575px;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+                ". . . A"
+                "B B C ."
+                "B B D E"
+                ". . . ."
+                ". F G G"
+                "H I G G"
+                "J . . .";
+    }
+}
+
+.grid-item{
+    background-color: hsl(212, 36%, 65%);
+    color: hsl(212, 36%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#one{
+    grid-area: A;
+}
+
+#two{
+    grid-area: B;
+    background-color: hsl(208, 48%, 47%);
+}
+#three{
+    grid-area: C;
+}
+
+#four{
+    grid-area: D;
+}
+
+#five{
+    grid-area: E;
+}
+
+#six{
+    grid-area: F;
+}
+
+#seven{
+    grid-area: G;
+    background-color: hsl(208, 48%, 47%);
+}
+
+#eight{
+    grid-area: H;
+}
+
+#nine{
+    grid-area: I;
+}
+
+#ten{
+    grid-area: J;
+}
