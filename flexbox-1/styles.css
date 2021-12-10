@@ -4,11 +4,19 @@ body {
     background-color: hsl(35, 40%, 91%);
     color: hsl(25, 22%, 56%);
     font-family: Avenir, Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     background-color: hsl(35, 40%, 95%);
     border-radius: 4px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .item {
@@ -16,4 +24,45 @@ body {
     border: 1px solid hsl(35, 40%, 78%);
     border-radius: 4px;
     box-shadow: 2px 2px 4px hsl(35, 40%, 78%);
+
+    margin: 4px;
+    padding: 20px;
 }
+
+#aside {
+    /*Op de MOBILE versie groeit de maat mee met het scherm*/
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+#main {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        /*
+        De flex direction houden we gelijk. We zorgen alleen dat de content begint te wrappen.
+        */
+        flex-basis: 1200px;
+        flex-wrap: nowrap;
+    }
+
+    #aside {
+        /*In de DESKTOP versie staat de maat van deze box vast*/
+        flex-basis: 300px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    /*
+    #main hoeft hier niet gestyled te worden: shrink en grow blijven het zelfde.
+    Hij heeft geen flex-basis nodig omdat hij al de ruimte gebruikt die #aside over laat.
+    */
+}
+
+
+
+
+
